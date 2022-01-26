@@ -2,22 +2,22 @@
 
 Connect to database using SQL with connection string:
 
-'''
+```
 public MySqlConnection connect_to_db()
   {
   MySqlConnection database = new MySqlConnection();
   db.ConnectionString = @"server=localhost; uid=root; database={database name}";
   return db;
   }
-'''
+```
 
 
 
 SQL statement to add new user to a database:
 
-'''
+```
 "INSERT INTO database({item one},{item two},{item three})" + "VALUES (@{item one}, @{item two}, @{item three})";
-'''
+```
 
 
 SQL to insert new data into a table in a database:
