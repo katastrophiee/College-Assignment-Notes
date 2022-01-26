@@ -22,6 +22,7 @@ SQL statement to add new user to a database:
 
 SQL to insert new data into a table in a database:
 
+```
 private void add_data()
   {
   MySqlConnection db = connect_to_db(); 
@@ -52,7 +53,8 @@ private void add_data()
     }
   }
 }
-  
+```
+
   
   
 Access the subroutine to connect to the database from one form to another:
@@ -60,18 +62,25 @@ Access the subroutine to connect to the database from one form to another:
 {form 1} - form the subroutine is on
 {form 2} - where we want to run it
 
+```
 {form 1} first_form = new {form 1}();
 MySqlConnection db = {form 1}.{name of subroutine to connect to database};
+```
 
 
 
 SQL command to select details with a specific criteria:
+
+```
 string command = "SELECT * FROM {name of table} WHERE {item in table}=@{external item}";
+```
 
 
 
 
 SQL subroutine to check for existing data:
+
+```
 private Tuple<{data type}, {data type}> check_if_existing_data()
 {
 
@@ -116,3 +125,4 @@ using (db)
 account.Close();
 return Tuple.Create(exists, name);
 }
+```
