@@ -127,3 +127,12 @@ using (db)
 return Tuple.Create(number, word);
 }
 ```
+
+
+
+Get tuple after returning it from a subroutine:
+
+```
+Tuple <{data type}, {data type}> tuple_one = check_if_existing_data();
+```
+
