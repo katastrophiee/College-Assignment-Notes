@@ -69,6 +69,14 @@ MySqlConnection db = {form 1}.{name of subroutine to connect to database};
 
 
 
+To run it:
+
+```
+{form 1} first_form = new {form 1}();
+MySqlConnection db = {form 1}.connect_to_db();
+MySqlDataReader myDataReader;
+
+
 SQL command to select details with a specific criteria:
 
 ```
@@ -85,20 +93,18 @@ private Tuple<{data type}, {data type}> check_if_existing_data()
 {
 
 bool exists = false;
-create_account account = new create_account();
-MySqlConnection db = account.Connect_to_db();
-MySqlDataReader myDataReader;
+int number = 0;
+string word = "";
+MySqlConnection db = connect_to_db();
 
-string command = "SELECT * FROM user_details WHERE username=@username AND password=@password";
+string command = "{sql statement}";
 
 
 using (db)
 {
     MySqlCommand find_user = new MySqlCommand(command, db);
-    find_user.Parameters.Add("@username", MySqlDbType.VarChar);
-    find_user.Parameters["@username"].Value = username_txt.Text;
-    find_user.Parameters.Add("@password", MySqlDbType.VarChar);
-    find_user.Parameters["@password"].Value = password_txt.Text;
+    find_user.Parameters.Add("@{item one}", MySqlDbType.VarChar);
+    find_user.Parameters["@{item one}"].Value = {value to check for in the database};
 
     try
     {
@@ -106,13 +112,9 @@ using (db)
         myDataReader = find_user.ExecuteReader();
         if (myDataReader.Read())
         {
-            int id = myDataReader.GetInt32(0);
-            string username = myDataReader.GetString(1);
-            string pass = myDataReader.GetString(2);
-            string email = myDataReader["Email"].ToString();
-            name = myDataReader.GetString(4);
-            Properties.Settings.Default.user_id = id;
-            exists = true;
+            number = myDataReader.GetInt32({index of item});
+            word = myDataReader.GetString({index of item});
+            exists = true; 
         }
         myDataReader.Close();
         db.Close();
@@ -122,7 +124,6 @@ using (db)
         MessageBox.Show(ex.Message);
     }
 }
-account.Close();
-return Tuple.Create(exists, name);
+return Tuple.Create(number, word);
 }
 ```
