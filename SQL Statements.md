@@ -75,7 +75,7 @@ To run it:
 {form 1} first_form = new {form 1}();
 MySqlConnection db = {form 1}.connect_to_db();
 MySqlDataReader myDataReader;
-
+```
 
 SQL command to select details with a specific criteria:
 
