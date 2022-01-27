@@ -25,3 +25,6 @@ private void {timer variable name}(object sender, EventArgs e)
 ```
 
 Link: https://stackoverflow.com/questions/27724835/animated-panel-in-c-sharp
+
+
+
