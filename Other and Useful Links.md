@@ -45,3 +45,10 @@ Link:https://stackoverflow.com/questions/1789967/how-to-programmatically-change-
 ```
 {button variable name}.BackgroundImage = new Bitmap(@"{file location of the image you want to change it to});
 ```
+
+
+
+Set a web browsers URL:
+
+{web browser variable name}.Navigate("{url for the website}");
+{web browser variable name}.ScriptErrorsSuppressed = true;
