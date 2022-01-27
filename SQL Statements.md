@@ -7,7 +7,7 @@ public MySqlConnection connect_to_db()
   {
   MySqlConnection database = new MySqlConnection();
   db.ConnectionString = @"server=localhost; uid=root; database={database name}";
-  return db;
+  return database;
   }
 ```
 
