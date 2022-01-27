@@ -1,3 +1,7 @@
-HI
+Regex to check if value has a number:
 
-sdgkjgjskdhgjshdgjkhsjkdhgjkshdgjkhjkdhgasdg
+```
+using System.Text.RegularExpressions;
+
+Regex
+```
