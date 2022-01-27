@@ -1,5 +1,10 @@
 {} = substitute for proper name
 
+To use the Sql features:
+```
+using MySql.Data.MySqlClient;
+```
+
 Connect to database using SQL with connection string:
 
 ```
