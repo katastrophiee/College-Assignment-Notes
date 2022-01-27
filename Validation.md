@@ -35,3 +35,11 @@ Regex to check if value consists of only characters:
 ```
 Regex {variable name for the regex} = new Regex("^[a-zA-Z ]+$");
 ```
+
+
+
+Check a variable with regex:
+
+```
+bool {variable name} = {regex variable name}.IsMatch({variable to check})
+```
