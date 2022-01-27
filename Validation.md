@@ -22,6 +22,14 @@ Regex {variable name for the regex} = new Regex(@"[A-Z]+");
 
 
 
+Regex to check if value has a lower case character:
+
+```
+Regex {variable name for the regex} = new Regex(@"[a-z]+");
+```
+
+
+
 Regex to check if value has a certain amount of characters:
 
 ```
