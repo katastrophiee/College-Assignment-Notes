@@ -51,3 +51,28 @@ Check a variable with regex:
 ```
 bool {variable name} = {regex variable name}.IsMatch({variable to check})
 ```
+
+
+
+To use the email checker:
+
+```
+using System.Net.Mail;
+```
+
+
+
+Check a email is formatted correctly:
+
+```
+bool valid = false;
+ try
+  {
+    MailAddress {variable name} = new MailAddress({variable with email to check});
+    valid = true;
+  }
+  catch (FormatException)
+  {
+    valid = false;
+  }
+```
