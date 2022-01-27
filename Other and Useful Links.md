@@ -37,3 +37,11 @@ Link: https://stackoverflow.com/questions/4343730/how-do-i-keep-a-label-centered
 ```
 
 
+
+Change button image using code:
+
+Link:https://stackoverflow.com/questions/1789967/how-to-programmatically-change-the-background-image-on-form-c-sharp
+
+```
+{button variable name}.BackgroundImage = new Bitmap(@"{file location of the image you want to change it to});
+```
