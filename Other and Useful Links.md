@@ -28,9 +28,6 @@ Link: https://stackoverflow.com/questions/27724835/animated-panel-in-c-sharp
 
 
 
-
-
-
 Center an item in a form using code:
 
 ```
