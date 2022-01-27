@@ -1,5 +1,7 @@
 Timer to animate a panel to slide:
 
+Link: https://stackoverflow.com/questions/27724835/animated-panel-in-c-sharp
+
 ```
 private void {timer variable name}(object sender, EventArgs e)
 {
@@ -24,14 +26,14 @@ private void {timer variable name}(object sender, EventArgs e)
 }
 ```
 
-Link: https://stackoverflow.com/questions/27724835/animated-panel-in-c-sharp
-
 
 
 Center an item in a form using code:
+
+Link: https://stackoverflow.com/questions/4343730/how-do-i-keep-a-label-centered-in-winforms
 
 ```
 {variable name of what you want to center}.Left = (this.{ 'ClientSize' for the form or variable name of what you want to center it in}.Width - {variable name of what you want to center}.Size.Width) / 2;
 ```
 
-Link: https://stackoverflow.com/questions/4343730/how-do-i-keep-a-label-centered-in-winforms
+
