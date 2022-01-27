@@ -50,5 +50,7 @@ Link:https://stackoverflow.com/questions/1789967/how-to-programmatically-change-
 
 Set a web browsers URL:
 
+```
 {web browser variable name}.Navigate("{url for the website}");
 {web browser variable name}.ScriptErrorsSuppressed = true;
+```
