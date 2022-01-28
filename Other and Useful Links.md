@@ -63,3 +63,11 @@ Set minimun and maximum dates for a date time picker:
 booking_date.MaxDate = DateTime.Today.AddMonths({amount of months you want to allow});
 booking_date.MinDate = DateTime.Today;
 ```
+
+
+
+Check item on a drop down list:
+
+```
+{name of drop down list}.SelectedIndex == {index of item you want to check for}
+```
