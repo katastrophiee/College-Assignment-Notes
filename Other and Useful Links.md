@@ -54,3 +54,12 @@ Set a web browsers URL:
 {web browser variable name}.Navigate("{url for the website}");
 {web browser variable name}.ScriptErrorsSuppressed = true;
 ```
+
+
+
+Set minimun and maximum dates for a date time picker:
+
+```
+booking_date.MaxDate = DateTime.Today.AddMonths({amount of months you want to allow});
+booking_date.MinDate = DateTime.Today;
+```
