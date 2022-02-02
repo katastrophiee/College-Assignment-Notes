@@ -71,3 +71,25 @@ Check item on a drop down list:
 ```
 {name of drop down list}.SelectedIndex == {index of item you want to check for}
 ```
+
+
+
+Show and hide password using button click:
+
+Link: https://stackoverflow.com/questions/8185747/how-can-i-unmask-password-text-box-and-mask-it-back-to-password
+
+```
+shown = false {variable with false as password is hidden at the start}
+
+{when buttons pressed}
+shown = !shown; {inverts the value}
+if (open == true)
+{
+    {button variable name}.UseSystemPasswordChar = false;
+    {button variable name}.PasswordChar = '\0';
+}
+else
+{
+    {button variable name}.PasswordChar = '*';
+}
+```
