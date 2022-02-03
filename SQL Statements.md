@@ -141,3 +141,22 @@ Get tuple after returning it from a subroutine:
 Tuple <{data type}, {data type}> tuple_one = check_if_existing_data();
 ```
 
+
+
+Get a count of an item in a database using an SQL statement:
+
+```
+mySqlConnection {variable name for your connection} = connect_to_db();
+string {variable name for your sql command} = "SELECT COUNT({item you want to count}) FROM {table name} WHERE {item you're comparing it to in the database} = '" + {variable name of item to compare to in program} + "';";
+
+using (variable name for your connection)
+{
+  MySqlCommand {variable name for your command} = new MySqlCommand({variable name for your sql command}, {variable name for your connection});
+  {variable name for your connection}.Open();
+  using({variable name for your command})
+  {
+    int {variable name for your count} = Convert.ToInt32({variable name for your command}.ExecuteScalar());
+  }
+  {variable name for your connection}.Close();
+}
+```
