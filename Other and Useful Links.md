@@ -93,3 +93,13 @@ else
     {button variable name}.PasswordChar = '*';
 }
 ```
+
+
+
+Open HTML link using default browser:
+
+Link: https://stackoverflow.com/questions/10989709/open-a-html-file-using-default-web-browser
+
+```
+System.Diagnostics.Process.Start({file path of your html link});
+```
