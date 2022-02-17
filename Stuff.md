@@ -75,14 +75,14 @@ Link: https://en.wikipedia.org/wiki/FURPS#:~:text=FURPS%20is%20an%20acronym%20re
 
 Plan:
 
-
-
+```
  Page 19
 •	How you are going to meet the requirements - a way of saying how you're going to meet everything
 •	What pages - describe each one in detail and what it meets + how it meets it
 •	Uac, kpis and functional and functionals – how you’re going to solve them
 •	Detailed description then justification as to why it meets your requirements 
-
+• talk more about law + legislations
+```
 The Equality Act 
 Link: https://www.gov.uk/guidance/equality-act-2010-guidance
 The Equality Act 2010 legally protects people from discrimination in the workplace and in wider society
