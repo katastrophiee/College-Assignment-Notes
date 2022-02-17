@@ -72,3 +72,17 @@ page 18/15
 
 Another way to assess non-functional is using FURPS model, which FURPS is an acronym for functionality, usability, reliability, performance and supportability
 Link: https://en.wikipedia.org/wiki/FURPS#:~:text=FURPS%20is%20an%20acronym%20representing,%2C%20Security%20(Safety%20%26%20Exploitability)
+
+Plan:
+
+
+
+ Page 19
+•	How you are going to meet the requirements - a way of saying how you're going to meet everything
+•	What pages - describe each one in detail and what it meets + how it meets it
+•	Uac, kpis and functional and functionals – how you’re going to solve them
+•	Detailed description then justification as to why it meets your requirements 
+
+The Equality Act 
+Link: https://www.gov.uk/guidance/equality-act-2010-guidance
+The Equality Act 2010 legally protects people from discrimination in the workplace and in wider society
