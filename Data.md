@@ -1,3 +1,6 @@
-HI
+Do a design for each of the tables you would have in a database
 
-sdgkjgjskdhgjshdgjkhsjkdhgjkshdgjkhjkdhgasdg
+students
+teachers
+tests
+classes
