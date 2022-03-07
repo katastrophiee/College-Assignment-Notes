@@ -103,3 +103,14 @@ Link: https://stackoverflow.com/questions/10989709/open-a-html-file-using-defaul
 ```
 System.Diagnostics.Process.Start({file path of your html link});
 ```
+
+
+
+
+Connect two forms using form inheritance:
+
+Link: https://docs.microsoft.com/en-us/dotnet/desktop/winforms/advanced/how-to-inherit-windows-forms?view=netframeworkdesktop-4.8
+
+```
+public class {name of form you want to inherit it} : {name space}.{name of the form you want to inherit from}
+```
