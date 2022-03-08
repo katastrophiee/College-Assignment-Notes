@@ -114,3 +114,11 @@ Link: https://docs.microsoft.com/en-us/dotnet/desktop/winforms/advanced/how-to-i
 ```
 public class {name of form you want to inherit it} : {name space}.{name of the form you want to inherit from}
 ```
+
+Screen Sizes:
+
+```
+1980, 1080
+1280, 720
+16 by 9 display, no scaling atm - ease of development - can be made to scale as its standard resolution
+```
