@@ -3,7 +3,7 @@ code to run php:
 
 ```
 var xmlhttp = new XMLHttpRequest();
-    xmlhttp.open("GET", "db.php?q=" + Score, true);
+    xmlhttp.open("GET", "db.php?q=" + Score, true); (file name of php to run)
     xmlhttp.send("http");
 ```
 
