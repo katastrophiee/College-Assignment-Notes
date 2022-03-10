@@ -46,3 +46,26 @@ foreach ({variable name of running form you want to show next} form in Applicati
     }
 }
 ```
+
+Remove a function for a button click:
+
+```
+{name of button}.Click -= {name of function ran when button is clicked}
+```
+
+Remove a function for a button click:
+
+```
+{name of button}.Click += {name of function ran when button is clicked}
+```
+
+Function for button click example:
+
+```
+private void teacher(object sender, EventArgs e)
+        {
+            this.Hide();
+            Form not_goal = new not_goof();
+            not_goal.Show();
+        }
+ ```
