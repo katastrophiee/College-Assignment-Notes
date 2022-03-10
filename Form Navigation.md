@@ -62,7 +62,7 @@ Remove a function for a button click:
 Function for button click example:
 
 ```
-private void teacher(object sender, EventArgs e)
+private void pressed(object sender, EventArgs e)
         {
             this.Hide();
             Form not_goal = new not_goof();
