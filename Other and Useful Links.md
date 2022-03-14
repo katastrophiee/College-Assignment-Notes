@@ -123,3 +123,22 @@ Screen Sizes:
 16 by 9 display, no scaling atm - ease of development - can be made to scale as its standard resolution
 iterative testing
 ```
+
+Dynaically making a label using a text file:
+
+```
+private void pog()
+        {
+            string readText = File.ReadAllText("H:/Documents/T-LEVEL/stealing_resources_for_educational_purposes.txt");
+            Size lblsize = new Size(1280, 10000000);
+            Label lbl = new Label();
+            //lbl.AutoSize = true;
+            lbl.Location = new Point(0, 0);
+            lbl.Size = lblsize;
+            lbl.Text = readText;
+            lbl.Font = new Font("Microsoft Sans Serif", 14, FontStyle.Underline);
+            lbl.BackColor = Color.Transparent;
+            this.Controls.Add(lbl);
+            lbl.BringToFront();
+        }
+```
