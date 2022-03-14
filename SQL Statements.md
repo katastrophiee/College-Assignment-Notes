@@ -160,3 +160,47 @@ using (variable name for your connection)
   {variable name for your connection}.Close();
 }
 ```
+
+Count:
+
+```
+private bool check_inputs()
+        {
+            int matches_found = -1;
+            bool exists = false;
+            MySqlConnection db = Connect_to_db();
+            MySqlDataReader myDataReader;
+            string command = "SELECT count(code) FROM students WHERE code=@code";
+
+
+            using (db)
+            {
+                MySqlCommand check_user = new MySqlCommand(command, db);
+                check_user.Parameters.Add("@code", MySqlDbType.Int32);
+                check_user.Parameters["@code"].Value = Convert.ToInt32(textBox1.Text);
+
+                try
+                {
+                    db.Open();
+                    myDataReader = check_user.ExecuteReader();
+                    if (myDataReader.Read())
+                    {
+                        matches_found = myDataReader.GetInt32(0);
+                    }
+                    if (matches_found > 0)
+                    {
+                        MessageBox.Show("This code is already in use!");
+                    }
+
+                    myDataReader.Close();
+                    db.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+
+            return exists;
+        }
+```
