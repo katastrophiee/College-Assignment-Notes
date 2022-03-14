@@ -204,3 +204,16 @@ private bool check_inputs()
             return exists;
         }
 ```
+
+User Friendly:
+
+```
+try
+{
+
+}
+catch (MySqlException ex)
+{
+    int errorcode = ex.Number;
+}
+```
