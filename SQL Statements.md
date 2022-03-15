@@ -114,7 +114,7 @@ using (db)
     try
     {
         db.Open();
-        myDataReader = find_user.ExecuteReader();
+        MySqlDataReader myDataReader = find_user.ExecuteReader();
         if (myDataReader.Read())
         {
             number = myDataReader.GetInt32({index of item});
