@@ -142,3 +142,11 @@ private void pog()
             lbl.BringToFront();
         }
 ```
+
+Read first line of text file:
+
+Link: https://stackoverflow.com/questions/27345854/read-only-first-line-from-a-text-file
+```
+using System.Linq; 
+string line1 = File.ReadLines("MyFile.txt").First(); // gets the first line from file.
+```
