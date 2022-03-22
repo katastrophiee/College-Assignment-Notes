@@ -150,3 +150,5 @@ Link: https://stackoverflow.com/questions/27345854/read-only-first-line-from-a-t
 using System.Linq; 
 string line1 = File.ReadLines("MyFile.txt").First(); // gets the first line from file.
 ```
+
+https://stackoverflow.com/questions/4672978/how-to-autosize-the-height-of-a-label-but-not-the-width
