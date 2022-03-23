@@ -152,3 +152,22 @@ string line1 = File.ReadLines("MyFile.txt").First(); // gets the first line from
 ```
 
 https://stackoverflow.com/questions/4672978/how-to-autosize-the-height-of-a-label-but-not-the-width
+
+
+Pass a value to a button click:
+
+Link:https://stackoverflow.com/questions/4815629/how-do-i-pass-variables-to-a-buttons-event-method
+
+```
+//adding the click to the button
+ {button name}.Click += (sender, EventArgs) =>
+                {
+                    {name of button click function}(sender, EventArgs, {item you want to pass});
+                };
+                
+//subroutine for the button click function
+void {name of button click function}(object sender, EventArgs e, string {item you want to pass})
+        {
+            //code you want to do in button click 
+        }
+```
