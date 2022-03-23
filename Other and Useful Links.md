@@ -171,3 +171,12 @@ void {name of button click function}(object sender, EventArgs e, string {item yo
             //code you want to do in button click 
         }
 ```
+
+auto size:
+
+```
+ lbl.BorderStyle = BorderStyle.None;
+            lbl.MaximumSize = new Size({length of your item/panel},0);
+            lbl.AutoSize = true;
+            topic_pnl.Controls.Add(lbl);
+ ```
