@@ -180,3 +180,13 @@ auto size:
             lbl.AutoSize = true;
             topic_pnl.Controls.Add(lbl);
  ```
+ 
+ access a php server:
+ 
+ ```
+ function AccessDB(){
+    var xmlhttp = new XMLHttpRequest();
+    xmlhttp.open("GET", "SQL.php?q=" + Score, true);
+    xmlhttp.send("http");  
+}
+ ```
