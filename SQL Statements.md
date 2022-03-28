@@ -217,3 +217,100 @@ catch (MySqlException ex)
     int errorcode = ex.Number;
 }
 ```
+
+Test:
+
+```
+ private Tuple<List<string>, List<double>> get_points()
+        {
+            int test_score = 0;
+            string test_date = "";
+            MySqlConnection db = connect_to_db();
+
+            string command = "SELECT dateOfTest, score FROM tests WHERE studentUsername=@username ORDER BY dateOfTest asc";
+
+            List<string> date = new List<string>();
+            List<double> score = new List<double>();
+
+            using (db)
+            {
+                MySqlCommand find_user = new MySqlCommand(command, db);
+                find_user.Parameters.Add("@username", MySqlDbType.VarChar);
+                find_user.Parameters["@username"].Value = "david";
+
+                try
+                {
+                    db.Open();
+                    MySqlDataReader myDataReader = find_user.ExecuteReader();
+                    while (myDataReader.Read())
+                    {
+                        test_date = myDataReader.GetString(0);
+                        test_score = myDataReader.GetInt32(1);
+                        date.Add(test_date);
+                        score.Add(test_score);
+                    }
+                    myDataReader.Close();
+                    db.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            return Tuple.Create(date, score);
+        }
+
+        public MySqlConnection connect_to_db()
+        {
+            MySqlConnection db = new MySqlConnection();
+            db.ConnectionString = @"server=localhost; uid=root; database=gidjohn_tutoring";
+            return db;
+        }
+
+        private void grapgh()
+        {
+
+            var tuple = get_points();
+            List<string> dates = tuple.Item1;
+            List<double> scores = tuple.Item2;
+            string[] x_axis = dates.ToArray();
+            double[] points = scores.ToArray();
+
+            //foreach (string item in dates)
+            //{
+            //    x_axis.Append(item);
+            //    MessageBox.Show(item);
+            //}
+            //foreach (int item in scores)
+            //{
+            //    points.Append(item);
+            //    MessageBox.Show(item);
+            //}
+
+            double[] ys1 = points;
+        
+
+        // clear old curves
+        zedGraphControl1.GraphPane.CurveList.Clear();
+
+        // plot the data as curves
+        var curve1 = zedGraphControl1.GraphPane.AddCurve(null, null, ys1, Color.Blue);
+        curve1.Line.IsAntiAlias = true;
+        curve1.Symbol.IsVisible = false;
+
+            
+            zedGraphControl1.GraphPane.XAxis.Type = ZedGraph.AxisType.Text;
+            zedGraphControl1.GraphPane.XAxis.Scale.TextLabels = x_axis;
+
+
+            // style the plot
+            zedGraphControl1.GraphPane.Title.Text = $"Line graph for Adam";
+        zedGraphControl1.GraphPane.XAxis.Title.Text = "Date";
+        zedGraphControl1.GraphPane.YAxis.Title.Text = "Score";
+
+        // auto-axis and update the display
+        zedGraphControl1.GraphPane.XAxis.ResetAutoScale(zedGraphControl1.GraphPane, CreateGraphics());
+        zedGraphControl1.GraphPane.YAxis.ResetAutoScale(zedGraphControl1.GraphPane, CreateGraphics());
+        zedGraphControl1.Refresh();
+        }
+```
