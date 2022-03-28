@@ -190,3 +190,43 @@ auto size:
     xmlhttp.send("http");  
 }
  ```
+ 
+ graph:
+ 
+ install ZedGraph
+ 
+ Add ZedGraphControl
+ 
+ ```
+  private void graph()
+        {
+        string[] x_axis = {"10/05/22", "10/05/22", "15/05/22", "08/07/22", "08/09/22" };
+            
+        double[] points = { 11, 21, 15, 20, 57};
+        double[] ys1 = points;
+        
+
+        // clear old curves
+        zedGraphControl1.GraphPane.CurveList.Clear();
+
+        // plot the data as curves
+        var curve1 = zedGraphControl1.GraphPane.AddCurve(null, null, ys1, Color.Blue);
+        curve1.Line.IsAntiAlias = true;
+        curve1.Symbol.IsVisible = false;
+
+            
+            zedGraphControl1.GraphPane.XAxis.Type = ZedGraph.AxisType.Text;
+            zedGraphControl1.GraphPane.XAxis.Scale.TextLabels = x_axis;
+
+
+            // style the plot
+            zedGraphControl1.GraphPane.Title.Text = $"Line graph for Adam";
+        zedGraphControl1.GraphPane.XAxis.Title.Text = "Date";
+        zedGraphControl1.GraphPane.YAxis.Title.Text = "Score";
+
+        // auto-axis and update the display
+        zedGraphControl1.GraphPane.XAxis.ResetAutoScale(zedGraphControl1.GraphPane, CreateGraphics());
+        zedGraphControl1.GraphPane.YAxis.ResetAutoScale(zedGraphControl1.GraphPane, CreateGraphics());
+        zedGraphControl1.Refresh();
+        }
+ ```
