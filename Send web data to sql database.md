@@ -18,3 +18,7 @@ php:
 	mysqli_query($conn,$sql);
 ?>
 ```
+
+php -S 0.0.0.0:8000 -t "H:\Occupational Specialism"
+
+http://127.0.0.1:8000/bull.html
