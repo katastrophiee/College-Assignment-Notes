@@ -260,3 +260,28 @@ label2.Text = Convert.ToString(average) +" %";
             }
 ```
 
+public void darkmode(Control myControl)
+        {
+            this.BackColor = Color.Black;
+            myControl.BackColor = Color.Black;
+            myControl.ForeColor = Color.White;
+            foreach (Control subC in myControl.Controls)
+            {
+                darkmode(subC);
+            }
+        }
+
+        public void lightmode(Control myControl)
+        {
+            this.BackColor = Color.White;
+            myControl.BackColor = Color.White;
+            myControl.ForeColor = Color.Black;
+            foreach (Control subC in myControl.Controls)
+            {
+                lightmode(subC);
+            }
+        }
+```
+
+https://stackoverflow.com/questions/22935285/change-color-of-all-controls-inside-the-form-in-c-sharp
+
