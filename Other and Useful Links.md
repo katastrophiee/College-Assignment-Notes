@@ -260,11 +260,13 @@ label2.Text = Convert.ToString(average) +" %";
             }
 ```
 
+Dark Mode and light mode:
+
 ```
 public void darkmode(Control myControl)
         {
-            this.BackColor = Color.Black;
-            myControl.BackColor = Color.Black;
+            this.BackColor = Color.FromArgb(40, 42, 55);
+            myControl.BackColor = Color.FromArgb(40, 42, 55);
             myControl.ForeColor = Color.White;
             foreach (Control subC in myControl.Controls)
             {
@@ -286,3 +288,25 @@ public void darkmode(Control myControl)
 
 LINK: https://stackoverflow.com/questions/22935285/change-color-of-all-controls-inside-the-form-in-c-sharp
 
+checking if button check box is true or false:
+
+```
+ if (checkBox1.Checked == true)
+            {
+                foreach (Control c in this.Controls)
+                {
+                    darkmode(c);
+                }
+                Properties.Settings.Default.dark_mode = true;
+                Properties.Settings.Default.Save();
+            }
+            else
+            {
+                foreach (Control c in this.Controls)
+                {
+                    lightmode(c);
+                }
+                Properties.Settings.Default.dark_mode = false;
+                Properties.Settings.Default.Save();
+            }
+ ```
