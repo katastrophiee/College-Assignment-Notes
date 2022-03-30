@@ -232,3 +232,31 @@ auto size:
  ```
  
  http://clipart-library.com/search1/?q=medals#gsc.tab=1&gsc.q=medals&gsc.page=1
+ 
+ get average of a list adn add it to a string:
+ 
+ ```
+var average = scores.Average();
+label2.Text = Convert.ToString(average) +" %";
+ ```
+ 
+ change picture box image:
+ 
+ ```
+ if (average < 40)
+            {
+                pictureBox1.Image = Image.FromFile("H:/Occupational Specialism/resources/bronze_medal.png");
+                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+            else if (average > 40 && average < 80)
+            {
+                pictureBox1.Image = Image.FromFile("H:/Occupational Specialism/resources/silver_medal.png");
+                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+            else
+            {
+                pictureBox1.Image = Image.FromFile("H:/Occupational Specialism/resources/gold_medal.png");
+                pictureBox1.SizeMode = PictureBoxSizeMode.Zoom;
+            }
+```
+
