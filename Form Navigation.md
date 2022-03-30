@@ -113,3 +113,5 @@ public void darkmode(Control myControl)
             }
         }
 ```
+
+https://stackoverflow.com/questions/22935285/change-color-of-all-controls-inside-the-form-in-c-sharp
