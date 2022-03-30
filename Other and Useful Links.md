@@ -350,3 +350,24 @@ subroutine to get average score from database and return average:
         }
 
 ```
+
+change check box button colour:
+
+(set flatstyle to flat)
+```
+public void darkmode(Control myControl)
+        {
+            if (myControl is CheckBox)
+            {
+                myControl.BackColor = Color.FromArgb(84, 97, 140); ;
+                myControl.ForeColor = Color.White;
+            }
+            this.BackColor = Color.FromArgb(40, 42, 55);
+            myControl.BackColor = Color.FromArgb(40, 42, 55);
+            myControl.ForeColor = Color.White;
+            foreach (Control subC in myControl.Controls)
+            {
+                darkmode(subC);
+            }
+        }
+```
