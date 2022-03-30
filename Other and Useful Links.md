@@ -310,3 +310,43 @@ checking if button check box is true or false:
                 Properties.Settings.Default.Save();
             }
  ```
+
+subroutine to get average score from database and return average:
+
+```
+ private int get_average()
+        {
+            MySqlConnection db = connect_to_db();
+
+            string command = "SELECT score FROM tests WHERE studentUsername=@username";
+            List<int> score = new List<int>();
+            int average = 0;
+
+            using (db)
+            {
+                MySqlCommand find_user = new MySqlCommand(command, db);
+                find_user.Parameters.Add("@username", MySqlDbType.VarChar);
+                find_user.Parameters["@username"].Value = "david";
+
+                try
+                {
+                    db.Open();
+                    MySqlDataReader myDataReader = find_user.ExecuteReader();
+                    while (myDataReader.Read())
+                    {
+                        int test_score = myDataReader.GetInt32(0);
+                        score.Add(test_score);
+                    }
+                    average = (int)score.Average();
+                    myDataReader.Close();
+                    db.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
+            }
+            return average;
+        }
+
+```
