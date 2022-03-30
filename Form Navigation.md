@@ -69,3 +69,47 @@ private void pressed(object sender, EventArgs e)
             not_goal.Show();
         }
  ```
+ 
+ dark and light mode:
+
+```
+ private void checkBox1_CheckedChanged(object sender, EventArgs e)
+        {
+            if (checkBox1.Checked == true)
+            {
+                foreach (Control c in this.Controls)
+                {
+                    darkmode(c);
+                }
+            }
+            else
+            {
+                foreach (Control c in this.Controls)
+                {
+                    lightmode(c);
+                }
+            }
+        }
+
+public void darkmode(Control myControl)
+        {
+            this.BackColor = Color.Black;
+            myControl.BackColor = Color.Black;
+            myControl.ForeColor = Color.White;
+            foreach (Control subC in myControl.Controls)
+            {
+                darkmode(subC);
+            }
+        }
+
+        public void lightmode(Control myControl)
+        {
+            this.BackColor = Color.White;
+            myControl.BackColor = Color.White;
+            myControl.ForeColor = Color.Black;
+            foreach (Control subC in myControl.Controls)
+            {
+                lightmode(subC);
+            }
+        }
+```
